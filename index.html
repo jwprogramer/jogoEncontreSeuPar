@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Encontre seu Par!</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="images/logo.png" alt="Logo do jogo">
+    </header>
+    <main>
+        
+      <div class="children-images">
+        <img class="criancadireita" src="images/criança1.png" alt="Criança feliz ao lado direito">
+        <div class="memory-game">
+            <!-- Cards will be added dynamically using JavaScript -->
+          </div>
+        <img class="criancaesquerda" src="images/criança2.png" alt="Criança feliz ao lado esquerdo">
+      </div>
+    </main>
+  </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <p>Parabéns! Você ganhou o jogo!</p>
+        </div>
+    </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
