@@ -5,32 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Adicione o link para o Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <title>Encontre seu Par!</title>
 </head>
-<body style="background-image: url('images/fundo.png'); background-size: cover; background-repeat: no-repeat; background-position: center">
-  <div class="container">
-    <header>
-      <img src="images/logo.png" alt="Logo do jogo">
-    </header>
+<body style="background-image: url('images/fundo.png'); background-size: cover; background-repeat: no-repeat;">
+
     <main>
-        
-      <div class="children-images">
-        <img class="criancadireita" src="images/criança1.png" alt="Criança feliz ao lado direito">
-        <div class="memory-game">
-            <!-- Cards will be added dynamically using JavaScript -->
-          </div>
-        <img class="criancaesquerda" src="images/criança2.png" alt="Criança feliz ao lado esquerdo">
+         <div class="row justify-content-center">
+            <img src="images/logo.png" class="d-inline-block align-top logo" alt="Logo do jogo">
+        </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <img class="img-fluid criancadireita" src="images/criança1.png" alt="Criança feliz ao lado direito">
+        </div>
+        <div class="col-md-4 memory-game">
+          <!-- Cards will be added dynamically using JavaScript -->
+        </div>
+        <div class="col-md-4">
+          <img class="img-fluid criancaesquerda" src="images/criança2.png" alt="Criança feliz ao lado esquerdo">
+        </div>
       </div>
     </main>
   </div>
 
-    <!-- Modal -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal()">&times;</span>
-          <p>Parabéns! Você ganhou o jogo!</p>
+  <!-- Modal usando Bootstrap -->
+  <div class="modal" id="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Parabéns!</h5>
+          <button type="button" class="close" data-dismiss="modal" onclick="closeModal()">&times;</button>
         </div>
+        <div class="modal-body">
+          <p>Você ganhou o jogo!</p>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- Adicione o link para o Bootstrap JS e o jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <script src="js/script.js"></script>
 </body>
