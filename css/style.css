@@ -69,11 +69,11 @@ body {
   }
   
   .card.flipped {
-    background-color: rgb(204, 83, 46);
+    background-color: rgb(204, 83, 46) !important;
   }
   
   .card.matched {
-    background-color: rgb(11, 116, 54);
+    background-color: rgb(11, 116, 54) !important;
     cursor: default;
   }
   
