@@ -1,19 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     const icons = ['fa-square', 'fa-square', 'fa-star', 'fa-star', 'fa-play', 'fa-play', 'fa-circle', 'fa-circle',
       'fa-home', 'fa-home', 'fa-times', 'fa-times', 'fa-heart', 'fa-heart', 'fa-gem', 'fa-gem',
-      'fa-certificate', 'fa-certificate', 'fa-arrow-up', 'fa-arrow-up'];
-  
+     'fa-certificate', 'fa-certificate', 'fa-arrow-up', 'fa-arrow-up'];
+
     let flippedCards = [];
     let matchedCards = [];
   
     const memoryGame = document.querySelector('.memory-game');
-  
-    // Shuffle function to randomize card order
+
     const shuffleIcons = () => {
       icons.sort(() => Math.random() - 0.5);
     };
   
-    // Function to create the card elements
+
     const createCard = (icon) => {
       const card = document.createElement('div');
       card.classList.add('card');
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       memoryGame.appendChild(card);
     };
   
-    // Function to handle card flipping
+
     const flipCard = (event) => {
       const selectedCard = event.currentTarget;
   
@@ -42,19 +41,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
-      // Function to show the modal
   const showModal = () => {
     const modal = document.getElementById('modal');
     modal.style.display = 'block';
   };
 
-  // Function to close the modal
   window.closeModal = () => {
     const modal = document.getElementById('modal');
     modal.style.display = 'none';
   };
   
-    // Function to check if flipped cards match
+
     const checkMatch = () => {
       const [card1, card2] = flippedCards;
   
@@ -67,15 +64,18 @@ document.addEventListener('DOMContentLoaded', () => {
           showModal();
           resetGame();
         }
+        document.getElementById('matchSound').play();
       } else {
+        document.getElementById('NoMatchSound').play();
         card1.classList.remove('flipped');
         card2.classList.remove('flipped');
+     
       }
   
       flippedCards = [];
     };
   
-    // Function to reset the game
+
     const resetGame = () => {
       memoryGame.innerHTML = '';
       matchedCards = [];
@@ -83,14 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
       startGame();
     };
   
-    // Function to start the game
+
     const startGame = () => {
       shuffleIcons();
       icons.forEach(createCard);
     };
   
-    // Initialize the game
+
     startGame();
   });
-  
-  
